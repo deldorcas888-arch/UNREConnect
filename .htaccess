@@ -1,0 +1,53 @@
+# Enable URL rewriting
+RewriteEngine On
+
+# Security headers
+<IfModule mod_headers.c>
+    # Protect against XSS attacks
+    Header set X-XSS-Protection "1; mode=block"
+    Header set X-Content-Type-Options "nosniff"
+    Header set X-Frame-Options "SAMEORIGIN"
+    
+    # Enable HSTS (uncomment after testing with HTTPS)
+    # Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+    
+    # Prevent MIME type sniffing
+    Header set X-Content-Type-Options "nosniff"
+    
+    # Disable caching for sensitive files
+    <FilesMatch "\.(php|ini|log|sh|sql|json|env|gitignore|htaccess|htpasswd|yml|yaml)$">
+        Header set Cache-Control "no-cache, no-store, must-revalidate"
+        Header set Pragma "no-cache"
+        Header set Expires 0
+    </FilesMatch>
+</IfModule>
+
+# Disable server signature
+ServerSignature Off
+
+# Protect sensitive files and directories
+<FilesMatch "^\.">
+    Require all denied
+</FilesMatch>
+
+<FilesMatch "\.(env|json|config|sql|log|md|gitignore|gitattributes|lock|phar|pem|key|p12|p7b|p7c|p7m|p7r|p7s|p8|p10|p12|pfx|cer|crl|der|csr|pem|p7b|p7c|p7m|p7r|p7s|p8|p10|p12|pfx|cer|crl|der|csr|pem|p7b|p7c|p7m|p7r|p7s|p8|p10|p12|pfx|cer|crl|der|csr)$">
+    Require all denied
+</FilesMatch>
+
+# Block access to hidden files and directories
+RewriteCond %{REQUEST_URI} "^/\." [OR]
+RewriteCond %{REQUEST_URI} "^/\..*$"
+RewriteRule .* - [F,L]
+
+# Ensure all PHP files are processed by PHP
+<FilesMatch "\.(php|phtml|php3|php4|php5|php7|phps)$">
+    SetHandler application/x-httpd-php
+</FilesMatch>
+
+# Prevent directory listing
+Options -Indexes
+
+# Handle front controller
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php?url=$1 [L,QSA]

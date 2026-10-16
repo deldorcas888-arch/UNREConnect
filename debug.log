@@ -1,0 +1,100 @@
+[25-Sep-2025 21:31:05 Europe/Berlin] Received request: Array
+(
+    [title] => test
+    [category] => Questions
+    [description] => test
+)
+
+[25-Sep-2025 21:31:05 Europe/Berlin] Forum Error: Unknown column 'date_updated' in 'field list'
+[25-Sep-2025 21:31:23 Europe/Berlin] Received request: Array
+(
+    [title] => test
+    [category] => Questions
+    [description] => test
+)
+
+[25-Sep-2025 21:31:23 Europe/Berlin] Forum Error: Unknown column 'date_updated' in 'field list'
+[25-Sep-2025 21:31:33 Europe/Berlin] Received request: Array
+(
+    [title] => test
+    [category] => Questions
+    [description] => test
+)
+
+[25-Sep-2025 21:31:33 Europe/Berlin] Forum Error: Unknown column 'date_updated' in 'field list'
+[25-Sep-2025 21:31:36 Europe/Berlin] Received request: Array
+(
+    [title] => test
+    [category] => Questions
+    [description] => test
+)
+
+[25-Sep-2025 21:31:36 Europe/Berlin] Forum Error: Unknown column 'date_updated' in 'field list'
+[25-Sep-2025 21:31:38 Europe/Berlin] Received request: Array
+(
+    [title] => test
+    [category] => Questions
+    [description] => test
+)
+
+[25-Sep-2025 21:31:38 Europe/Berlin] Forum Error: Unknown column 'date_updated' in 'field list'
+[25-Sep-2025 21:33:16 Europe/Berlin] Received request: Array
+(
+    [title] => test
+    [category] => Questions
+    [description] => test
+)
+
+[25-Sep-2025 21:33:16 Europe/Berlin] Topic created successfully with ID: 22
+[25-Sep-2025 21:35:03 Europe/Berlin] Received request: Array
+(
+    [title] => Work Hours
+    [category] => Discussions
+    [description] => test
+)
+
+[25-Sep-2025 21:35:03 Europe/Berlin] Topic created successfully with ID: 23
+[25-Sep-2025 21:37:19 Europe/Berlin] Received request: Array
+(
+    [title] => Work
+    [category] => Discussions
+    [description] => test
+)
+
+[25-Sep-2025 21:37:19 Europe/Berlin] Topic created successfully with ID: 24
+[25-Sep-2025 21:47:45 Europe/Berlin] Received request: Array
+(
+    [title] => past
+    [category] => Events
+    [description] => talk show
+)
+
+[25-Sep-2025 21:47:45 Europe/Berlin] Topic created successfully with ID: 25
+[26-Sep-2025 02:42:53 Europe/Berlin] Received request: Array
+(
+    [title] => Post
+    [category] => Announcements
+    [description] => posting
+    [notify] => on
+)
+
+[26-Sep-2025 02:42:53 Europe/Berlin] Topic created successfully with ID: 33
+[26-Sep-2025 02:43:05 Europe/Berlin] Received request: Array
+(
+    [title] => Post
+    [category] => Announcements
+    [description] => posting
+    [notify] => on
+    [draft] => 1
+)
+
+[26-Sep-2025 02:43:05 Europe/Berlin] Topic created successfully with ID: 34
+[26-Sep-2025 02:43:57 Europe/Berlin] Received request: Array
+(
+    [title] => Post
+    [category] => Announcements
+    [description] => posting
+    [notify] => on
+)
+
+[26-Sep-2025 02:43:57 Europe/Berlin] Topic created successfully with ID: 35
